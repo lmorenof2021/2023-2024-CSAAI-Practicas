@@ -1,0 +1,12 @@
+body {
+    background-color: rgb(2, 66, 2);
+    color: beige
+  }
+
+h1  {
+    color: rgb(206, 66, 211);
+}
+
+p   {
+    margin : 20px
+}
