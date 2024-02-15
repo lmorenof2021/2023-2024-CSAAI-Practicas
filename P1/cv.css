@@ -1,0 +1,139 @@
+/* https://www.w3schools.com/howto/howto_css_two_columns.asp */
+/* https://developer.mozilla.org/es/docs/Web/CSS/box-sizing */
+/* Así definimos el comportamiento de caja para todos los elementos */
+* {
+    box-sizing: border-box;
+  }
+  
+img{
+    max-height: 100%;
+    height: auto;
+    border-radius: 40%;
+    padding: 0px;
+    margin: 0px;
+    border: solid;
+    border-color: rgb(0, 0, 0);
+    
+
+}
+
+body  {
+  background-image: url('fondonuevo.jpg');
+  background-size: cover; 
+
+}
+
+
+/* Crear columnas de ancho diferente que se colocan una a continuación de la otra */
+.columna {
+float: left;
+padding: 10px;
+min-height: 500px;
+}
+
+.izquierda {
+width: 25%;
+}
+
+.derecha {
+width: 75%;
+}
+
+/* Clear floats despues de las columnas para eliminar la superposición */
+.filla:after {
+content: "";
+display: table;
+clear: both;
+}
+
+#c1 {
+   
+  border: solid;
+  border-color: rgb(255, 255, 255);
+   color: #fff;
+   text-shadow:
+     1px 1px 2px #000,
+     -1px 1px 2px #000,
+     -1px -1px 0 #000,
+     1px -1px 0 #000;
+}
+
+
+#tituloinicial {
+    
+  padding: 10px;
+  margin: 10px;
+  border: solid;
+  border-color: rgb(179, 255, 0);
+  -webkit-text-stroke: 1px rgb(179, 255, 0);
+  color: black;
+}
+
+  #titulos {
+    
+    padding: 10px;
+    margin: 10px;
+    border: solid;
+    border-color: rgb(0, 0, 0);
+    /*-webkit-text-stroke: 0.7px rgb(255, 255, 255);*/
+    color: #fff;
+    text-shadow:
+      1px 1px 2px #000,
+      -1px 1px 2px #000,
+      -1px -1px 0 #000,
+      1px -1px 0 #000;
+  }
+  
+  #explicacion {
+    padding: 10px;
+    margin: 10px;
+    border: solid;
+    border-color: rgb(255, 255, 255);
+    /*-webkit-text-stroke: 1px rgb(0, 0, 0);
+    color: white;*/
+    color: #fff;
+    text-shadow:
+      1px 1px 2px #000,
+      -1px 1px 2px #000,
+      -1px -1px 0 #000,
+      1px -1px 0 #000;
+  }
+    
+
+
+/*h1  {
+  padding: 10px;
+  margin: 10px;
+  border: solid;
+  border-color: blue;
+}
+/*
+
+/* estilos para imágenes https://www.w3schools.com/css/css3_images.asp */
+/* posicionamiento de imágenes https://www.w3schools.com/css/css_positioning.asp */
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+.iresponsive {
+    padding: 0 6px;
+    float: left;
+    width: 50%;
+  }
+
+/* Responsive layout - cuando el ancho de pantalla es menor a 600px, muestra las columnas apiladas. */
+/* Así conseguimos que el contenido se vea bien en dispositvos móviles */
+
+@media screen and (max-width: 600px) {
+    .columna {
+      width: 100%;
+    }
+
+    .iresponsive {
+        width: 100%;
+    }
+}
+
+/* Más sobre diseño web responsive https://www.w3schools.com/css/css_rwd_intro.asp */
