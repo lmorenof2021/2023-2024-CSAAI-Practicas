@@ -8,13 +8,6 @@
 img{
     max-height: 100%;
     height: auto;
-    border-radius: 40%;
-    padding: 0px;
-    margin: 0px;
-    border: solid;
-    border-color: rgb(0, 0, 0);
-    
-
 }
 
 body  {
@@ -32,11 +25,11 @@ min-height: 500px;
 }
 
 .izquierda {
-width: 25%;
+width: 35%;
 }
 
 .derecha {
-width: 75%;
+width: 65%;
 }
 
 /* Clear floats despues de las columnas para eliminar la superposición */
@@ -60,11 +53,12 @@ clear: both;
 
 
 #tituloinicial {
-    
+  border: rgb(179, 255, 0) 8px groove;  
   padding: 10px;
   margin: 10px;
-  border: solid;
-  border-color: rgb(179, 255, 0);
+  border-radius: 20px;
+  /*border: solid;
+  border-color: rgb(179, 255, 0);*/
   -webkit-text-stroke: 1px rgb(179, 255, 0);
   color: black;
 }
@@ -73,6 +67,7 @@ clear: both;
     
     padding: 10px;
     margin: 10px;
+    border-radius: 20px;
     border: solid;
     border-color: rgb(0, 0, 0);
     /*-webkit-text-stroke: 0.7px rgb(255, 255, 255);*/
@@ -87,6 +82,7 @@ clear: both;
   #explicacion {
     padding: 10px;
     margin: 10px;
+    border-radius: 20px;
     border: solid;
     border-color: rgb(255, 255, 255);
     /*-webkit-text-stroke: 1px rgb(0, 0, 0);
@@ -101,14 +97,21 @@ clear: both;
     
 
 
-/*h1  {
+ li {
   padding: 10px;
   margin: 10px;
   border: solid;
-  border-color: blue;
-}
-/*
-
+  border-radius: 20px;
+  border-color: rgb(255, 255, 255);
+  /*-webkit-text-stroke: 1px rgb(0, 0, 0);
+  color: white;*/
+  color: #fff;
+  text-shadow:
+    1px 1px 2px #000,
+    -1px 1px 2px #000,
+    -1px -1px 0 #000,
+    1px -1px 0 #000;
+ }
 /* estilos para imágenes https://www.w3schools.com/css/css3_images.asp */
 /* posicionamiento de imágenes https://www.w3schools.com/css/css_positioning.asp */
 
