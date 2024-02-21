@@ -4,10 +4,25 @@
 * {
     box-sizing: border-box;
   }
+
+  p {
+    text-align: center;
+    color: #fff;
+    text-shadow:
+      1px 1px 2px #000,
+      -1px 1px 2px #000,
+      -1px -1px 0 #000,
+      1px -1px 0 #000;
+    font-size: 80%;
+  }
   
-img{
+  
+#imghtml{
+    height: 120px;
+    width: 120px;
     max-height: 100%;
-    height: auto;
+    
+    
 }
 
 body  {
@@ -22,14 +37,15 @@ body  {
 float: left;
 padding: 10px;
 min-height: 500px;
+max-height: auto;
 }
 
 .izquierda {
-width: 35%;
+width: 30%;
 }
 
 .derecha {
-width: 65%;
+width: 70%;
 }
 
 /* Clear floats despues de las columnas para eliminar la superposición */
@@ -39,7 +55,22 @@ display: table;
 clear: both;
 }
 
-#c1 {
+#c1{
+
+  border: solid;
+  border-color: rgb(255, 255, 255);
+  color: #fff;
+  text-shadow:
+     1px 1px 2px #000,
+     -1px 1px 2px #000,
+     -1px -1px 0 #000,
+     1px -1px 0 #000;
+  
+  
+    
+}
+
+#c2 {
    
   border: solid;
   border-color: rgb(255, 255, 255);
@@ -49,6 +80,7 @@ clear: both;
      -1px 1px 2px #000,
      -1px -1px 0 #000,
      1px -1px 0 #000;
+    
 }
 
 
@@ -101,15 +133,13 @@ clear: both;
 /* estilos para imágenes https://www.w3schools.com/css/css3_images.asp */
 /* posicionamiento de imágenes https://www.w3schools.com/css/css_positioning.asp */
 
-img {
-    width: 100%;
-    height: auto;
-}
+
 
 .iresponsive {
     padding: 0 6px;
     float: left;
     width: 50%;
+    text-align: center;
   }
 
 /* Responsive layout - cuando el ancho de pantalla es menor a 600px, muestra las columnas apiladas. */
