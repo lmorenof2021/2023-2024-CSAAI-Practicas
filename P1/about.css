@@ -6,27 +6,16 @@ img{
     max-height: 100%;
     height: 100px;
     width: 100px;
-    /*border-radius: 30%;
-    padding: 0px;
-    margin: 0px;*/
-
 }
 
 
 body  {
   background-image: url('fondonuevo.jpg');
   background-size: cover; 
-
 }
 
 
 body {
-    
-    /*padding: 10px;
-    margin: 10px;*/
-    /*border: solid;
-    border-color: rgb(0, 0, 0);*/
-    /*-webkit-text-stroke: 0.7px rgb(255, 255, 255);*/
     color: #fff;
     text-shadow:
       1px 1px 2px #000,
@@ -35,3 +24,18 @@ body {
       1px -1px 0 #000;
   }
 
+
+  .iresponsive {
+    padding: 0 6px;
+    float: left;
+    width: 50%;
+    text-align: center;
+  }
+
+
+@media screen and (max-width: 600px) {
+
+    .iresponsive {
+        width: 100%;
+    }
+}
