@@ -108,7 +108,7 @@ clear: both;
 
 
 
-  #titulos {
+  .titulos {
     
     padding: 10px;
     margin: 10px;
@@ -126,7 +126,7 @@ clear: both;
     box-shadow: 0 0 20px rgb(255, 255, 255);
   }
   
-  #explicacion {
+  .explicacion {
     padding: 10px;
     margin: 10px;
     border-radius: 20px;
