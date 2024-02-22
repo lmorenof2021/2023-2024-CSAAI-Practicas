@@ -1,0 +1,10 @@
+button {
+    background: green;
+    color: #FFF;
+    border-radius: 25px;
+    padding: 10px 20px;
+    border: 0;
+    cursor: pointer;
+    font-family: Fredoka;
+    font-size: 18pt;
+}
