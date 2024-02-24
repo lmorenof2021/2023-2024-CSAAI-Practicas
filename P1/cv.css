@@ -2,39 +2,39 @@
 /* https://developer.mozilla.org/es/docs/Web/CSS/box-sizing */
 /* Así definimos el comportamiento de caja para todos los elementos */
 * {
-    box-sizing: border-box;
-  }
+  box-sizing: border-box;
+}
 
-  p {
-    text-align: center;
-    color: #fff;
-    text-shadow:
-      1px 1px 2px #000,
-      -1px 1px 2px #000,
-      -1px -1px 0 #000,
-      1px -1px 0 #000;
-    font-size: 80%;
-  }
-  
-  
+p {
+  text-align: center;
+  color: #fff;
+  text-shadow:
+    1px 1px 2px #000,
+    -1px 1px 2px #000,
+    -1px -1px 0 #000,
+    1px -1px 0 #000;
+  font-size: 80%;
+}
+
+
 #imghtml{
-    height: 190px;
-    width: 170px;
-    max-height: 100%;
-    border: rgb(255, 255, 0) 8px groove;  
-    padding: 10px;
-    margin: 10px;
-    border-radius: 50px;
-    /*background-color: grey;*/
-    
-    box-shadow: 0 0 20px rgb(255, 255, 0);
-    
-    
+  height: 190px;
+  width: 170px;
+  max-height: 100%;
+  border: rgb(255, 255, 0) 8px groove;  
+  padding: 10px;
+  margin: 10px;
+  border-radius: 50px;
+  /*background-color: grey;*/
+  
+  box-shadow: 0 0 20px rgb(255, 255, 0);
+  
+  
 }
 
 body  {
-  background-image: url('fondonuevo.jpg');
-  background-size: cover; 
+background-image: url('fondonuevo.jpg');
+background-size: cover; 
 
 }
 
@@ -66,84 +66,84 @@ clear: both;
 
 #c1{
 
-  border: solid;
-  border-color: rgb(255, 255, 255);
-  color: #fff;
-  text-shadow:
-     1px 1px 2px #000,
-     -1px 1px 2px #000,
-     -1px -1px 0 #000,
-     1px -1px 0 #000;
-  height: 100%;
+border: solid;
+border-color: rgb(255, 255, 255);
+color: #fff;
+text-shadow:
+   1px 1px 2px #000,
+   -1px 1px 2px #000,
+   -1px -1px 0 #000,
+   1px -1px 0 #000;
+height: 100%;
+
+
   
-  
-    
 }
 
 #c2 {
 
-  border: solid;
-  border-color: rgb(255, 255, 255);
-   color: #fff;
-   text-shadow:
-     1px 1px 2px #000,
-     -1px 1px 2px #000,
-     -1px -1px 0 #000,
-     1px -1px 0 #000;
-  height: 100%;
+border: solid;
+border-color: rgb(255, 255, 255);
+ color: #fff;
+ text-shadow:
+   1px 1px 2px #000,
+   -1px 1px 2px #000,
+   -1px -1px 0 #000,
+   1px -1px 0 #000;
+height: 100%;
 }
 
 
 #tituloinicial {
-  border: rgb(255, 255, 0) 8px groove;  
-  padding: 10px;
-  margin: 10px;
-  border-radius: 20px;
-  -webkit-text-stroke: 1.5px rgb(0, 0, 0);
-  color: rgb(255, 255, 0);
-  text-shadow: 0 0 30px #ffffff;
-  box-shadow: 0 0 20px rgb(255, 255, 0);
+border: rgb(255, 255, 0) 8px groove;  
+padding: 10px;
+margin: 10px;
+border-radius: 20px;
+-webkit-text-stroke: 1.5px rgb(0, 0, 0);
+color: rgb(255, 255, 0);
+text-shadow: 0 0 30px #ffffff;
+box-shadow: 0 0 20px rgb(255, 255, 0);
 }
 
 
 
 
-  .titulos {
-    
-    padding: 10px;
-    margin: 10px;
-    border-radius: 20px;
-    border: solid;
-    border-color: rgb(0, 0, 0);
-    -webkit-text-stroke: px rgb(0, 0, 0);
-    color: #fff;
-    text-shadow:
-      1px 1px 2px #000,
-      -1px 1px 2px #000,
-      -1px -1px 0 #000,
-      1px -1px 0 #000;
-
-    box-shadow: 0 0 20px rgb(255, 255, 255);
-  }
+.titulos {
   
-  .explicacion {
-    padding: 10px;
-    margin: 10px;
-    border-radius: 20px;
-    border: solid;
-    border-color: rgb(255, 255, 255);
-    /*-webkit-text-stroke: 1px rgb(0, 0, 0);
-    color: white;*/
-    color: #fff;
-    text-shadow:
-      1px 1px 2px #000,
-      -1px 1px 2px #000,
-      -1px -1px 0 #000,
-      1px -1px 0 #000;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 20px;
+  border: solid;
+  border-color: rgb(0, 0, 0);
+  -webkit-text-stroke: px rgb(0, 0, 0);
+  color: #fff;
+  text-shadow:
+    1px 1px 2px #000,
+    -1px 1px 2px #000,
+    -1px -1px 0 #000,
+    1px -1px 0 #000;
+
+  box-shadow: 0 0 20px rgb(255, 255, 255);
+}
+
+.explicacion {
+  padding: 10px;
+  margin: 10px;
+  border-radius: 20px;
+  border: solid;
+  border-color: rgb(255, 255, 255);
+  /*-webkit-text-stroke: 1px rgb(0, 0, 0);
+  color: white;*/
+  color: #fff;
+  text-shadow:
+    1px 1px 2px #000,
+    -1px 1px 2px #000,
+    -1px -1px 0 #000,
+    1px -1px 0 #000;
 
 
-  }
-    
+}
+  
 
 
 
@@ -153,23 +153,23 @@ clear: both;
 
 
 .iresponsive {
-    padding: 0 6px;
-    float: left;
-    width: 50%;
-    text-align: center;
-  }
+  padding: 0 6px;
+  float: left;
+  width: auto;
+  text-align: center;
+}
 
 /* Responsive layout - cuando el ancho de pantalla es menor a 600px, muestra las columnas apiladas. */
 /* Así conseguimos que el contenido se vea bien en dispositvos móviles */
 
 @media screen and (max-width: 600px) {
-    .columna {
-      width: 100%;
-    }
+  .columna {
+    width: 100%;
+  }
 
-    .iresponsive {
-        width: 100%;
-    }
+  .iresponsive {
+      width: 100%;
+  }
 }
 
 /* Más sobre diseño web responsive https://www.w3schools.com/css/css_rwd_intro.asp */
