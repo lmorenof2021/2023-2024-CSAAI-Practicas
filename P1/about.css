@@ -48,19 +48,7 @@ h3 {
   box-shadow: 0 0 20px rgb(255, 255, 255);
 }
 
-.url {
-  padding: 5px;
-  margin: 5px;
-  border-radius: 20px;
-  border: solid;
-  border-color: rgb(0, 0, 0);
-  color: #fbff00;
-    text-shadow:
-      1px 1px 2px #000,
-      -1px 1px 2px #000,
-      -1px -1px 0 #000,
-      1px -1px 0 #000;
-}
+
 
   .iresponsive {
     padding: 0 6px;
