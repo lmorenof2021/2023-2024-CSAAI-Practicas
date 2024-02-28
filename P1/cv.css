@@ -106,7 +106,14 @@ box-shadow: 0 0 20px rgb(255, 255, 0);
 }
 
 
-
+a {
+  color: #fbff00;
+    text-shadow:
+      1px 1px 2px #000,
+      -1px 1px 2px #000,
+      -1px -1px 0 #000,
+      1px -1px 0 #000;
+}
 
 .titulos {
   
@@ -132,8 +139,6 @@ box-shadow: 0 0 20px rgb(255, 255, 0);
   border-radius: 20px;
   border: solid;
   border-color: rgb(255, 255, 255);
-  /*-webkit-text-stroke: 1px rgb(0, 0, 0);
-  color: white;*/
   color: #fff;
   text-shadow:
     1px 1px 2px #000,
