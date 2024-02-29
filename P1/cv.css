@@ -150,7 +150,7 @@ a {
 
 .iresponsive {
   padding: 0 6px;
-  float: left;
+ /* float: left; */
   width: auto;
   text-align: center;
 
