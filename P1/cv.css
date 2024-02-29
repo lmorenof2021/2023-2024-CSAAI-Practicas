@@ -44,7 +44,7 @@ background-size: cover;
 float: left;
 padding: 10px;
 min-height: 500px;
-max-height: auto;
+max-height: max-content;
 
 }
 
