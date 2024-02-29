@@ -5,15 +5,16 @@
   box-sizing: border-box;
 }
 
-p {
-  text-align: center;
-  color: #fff;
-  text-shadow:
-    1px 1px 2px #000,
-    -1px 1px 2px #000,
-    -1px -1px 0 #000,
-    1px -1px 0 #000;
-  font-size: 80%;
+li{
+color: #fff;
+text-shadow:
+   1px 1px 2px #000,
+   -1px 1px 2px #000,
+   -1px -1px 0 #000,
+   1px -1px 0 #000;
+height: 100%;
+font-size: 120%;
+-webkit-text-stroke: 0.5px rgb(0, 0, 0);
 }
 
 
@@ -55,7 +56,7 @@ width: 65%;
 }
 
 /* Clear floats despues de las columnas para eliminar la superposición */
-.filla:after {
+.fila:after {
 content: "";
 display: table;
 clear: both;
@@ -84,6 +85,7 @@ border-color: rgb(255, 255, 255);
    -1px -1px 0 #000,
    1px -1px 0 #000;
 height: 100%;
+
 }
 
 
@@ -116,7 +118,7 @@ a {
   border-radius: 20px;
   border: solid;
   border-color: rgb(0, 0, 0);
-  -webkit-text-stroke: px rgb(0, 0, 0);
+  -webkit-text-stroke: 0.5px rgb(0, 0, 0);
   color: #fff;
   text-shadow:
     1px 1px 2px #000,
@@ -135,8 +137,6 @@ a {
     -1px 1px 2px #000,
     -1px -1px 0 #000,
     1px -1px 0 #000;
-
-
 }
   
 
@@ -148,6 +148,7 @@ a {
   float: left;
   width: auto;
   text-align: center;
+
 }
 
 /* Responsive layout - cuando el ancho de pantalla es menor a 600px, muestra las columnas apiladas. */
