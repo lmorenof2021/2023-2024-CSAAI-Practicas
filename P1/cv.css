@@ -95,6 +95,7 @@ height: 100%;
 
 
 #tituloinicial {
+text-align: center;
 border: rgb(255, 255, 0) 8px groove;  
 padding: 10px;
 margin: 10px;
@@ -114,6 +115,7 @@ a {
       -1px -1px 0 #000,
       1px -1px 0 #000;
 }
+
 
 .titulos {
   
