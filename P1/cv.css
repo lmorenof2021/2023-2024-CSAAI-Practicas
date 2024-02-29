@@ -16,7 +16,7 @@
 }
 */
 .tamanio{
-  font-size: 150%;
+  font-size: 130%;
   text-align: center;
 }
 
@@ -50,11 +50,11 @@ max-height: max-content;
 }
 
 .izquierda {
-width: 30%;
+width: 35%;
 }
 
 .derecha {
-width: 70%;
+width: 65%;
 
 }
 
@@ -66,7 +66,6 @@ clear: both;
 }
 
 #c1{
-padding-left: 70px;
 border: solid;
 border-color: rgb(255, 255, 255);
 color: #fff;
@@ -89,7 +88,6 @@ border-color: rgb(255, 255, 255);
    -1px -1px 0 #000,
    1px -1px 0 #000;
 height: 100%;
-
 
 }
 
