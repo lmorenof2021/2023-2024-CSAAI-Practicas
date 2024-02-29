@@ -25,11 +25,8 @@ p {
   padding: 10px;
   margin: 10px;
   border-radius: 50px;
-  /*background-color: grey;*/
-  
   box-shadow: 0 0 20px rgb(255, 255, 0);
-  
-  
+ 
 }
 
 body  {
@@ -65,7 +62,6 @@ clear: both;
 }
 
 #c1{
-
 border: solid;
 border-color: rgb(255, 255, 255);
 color: #fff;
@@ -76,12 +72,9 @@ text-shadow:
    1px -1px 0 #000;
 height: 100%;
 
-
-  
 }
 
 #c2 {
-
 border: solid;
 border-color: rgb(255, 255, 255);
  color: #fff;
@@ -117,8 +110,7 @@ a {
 }
 
 
-.titulos {
-  
+.titulos { 
   padding: 10px;
   margin: 10px;
   border-radius: 20px;
@@ -152,12 +144,8 @@ a {
 }
   
 
-
-
 /* estilos para imágenes https://www.w3schools.com/css/css3_images.asp */
 /* posicionamiento de imágenes https://www.w3schools.com/css/css_positioning.asp */
-
-
 
 .iresponsive {
   padding: 0 6px;
