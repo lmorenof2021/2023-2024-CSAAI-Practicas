@@ -6,15 +6,13 @@
 }
 
 li{
-color: #fff;
-text-shadow:
-   1px 1px 2px #000,
-   -1px 1px 2px #000,
-   -1px -1px 0 #000,
-   1px -1px 0 #000;
-height: 100%;
-font-size: 120%;
--webkit-text-stroke: 0.5px rgb(0, 0, 0);
+  padding: 10px;
+  margin: 10px;
+  text-shadow:
+    1px 1px 2px #000,
+    -1px 1px 2px #000,
+    -1px -1px 0 #000,
+    1px -1px 0 #000;
 }
 
 
@@ -56,7 +54,7 @@ width: 65%;
 }
 
 /* Clear floats despues de las columnas para eliminar la superposición */
-.fila:after {
+.filla:after {
 content: "";
 display: table;
 clear: both;
@@ -118,7 +116,7 @@ a {
   border-radius: 20px;
   border: solid;
   border-color: rgb(0, 0, 0);
-  -webkit-text-stroke: 0.5px rgb(0, 0, 0);
+  -webkit-text-stroke: px rgb(0, 0, 0);
   color: #fff;
   text-shadow:
     1px 1px 2px #000,
@@ -137,6 +135,8 @@ a {
     -1px 1px 2px #000,
     -1px -1px 0 #000,
     1px -1px 0 #000;
+
+
 }
   
 

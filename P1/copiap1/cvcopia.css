@@ -1,0 +1,167 @@
+/* https://www.w3schools.com/howto/howto_css_two_columns.asp */
+/* https://developer.mozilla.org/es/docs/Web/CSS/box-sizing */
+/* Así definimos el comportamiento de caja para todos los elementos */
+* {
+    box-sizing: border-box;
+  }
+  
+  li{
+    padding: 10px;
+    margin: 10px;
+    text-shadow:
+      1px 1px 2px #000,
+      -1px 1px 2px #000,
+      -1px -1px 0 #000,
+      1px -1px 0 #000;
+  }
+  
+  
+  #imghtml{
+    height: 190px;
+    width: 170px;
+    max-height: 100%;
+    border: rgb(255, 255, 0) 8px groove;  
+    padding: 10px;
+    margin: 10px;
+    border-radius: 50px;
+    box-shadow: 0 0 20px rgb(255, 255, 0);
+   
+  }
+  
+  body  {
+  background-image: url('fondonuevo.jpg');
+  background-size: cover; 
+  
+  }
+  
+  
+  /* Crear columnas de ancho diferente que se colocan una a continuación de la otra */
+  .columna {
+  float: left;
+  padding: 10px;
+  min-height: 500px;
+  max-height: auto;
+  
+  }
+  
+  .izquierda {
+  width: 35%;
+  }
+  
+  .derecha {
+  width: 65%;
+  
+  }
+  
+  /* Clear floats despues de las columnas para eliminar la superposición */
+  .filla:after {
+  content: "";
+  display: table;
+  clear: both;
+  }
+  
+  #c1{
+  border: solid;
+  border-color: rgb(255, 255, 255);
+  color: #fff;
+  text-shadow:
+     1px 1px 2px #000,
+     -1px 1px 2px #000,
+     -1px -1px 0 #000,
+     1px -1px 0 #000;
+  height: 100%;
+  
+  }
+  
+  #c2 {
+  border: solid;
+  border-color: rgb(255, 255, 255);
+   color: #fff;
+   text-shadow:
+     1px 1px 2px #000,
+     -1px 1px 2px #000,
+     -1px -1px 0 #000,
+     1px -1px 0 #000;
+  height: 100%;
+  
+  }
+  
+  
+  #tituloinicial {
+  text-align: center;
+  border: rgb(255, 255, 0) 8px groove;  
+  padding: 10px;
+  margin: 10px;
+  border-radius: 20px;
+  -webkit-text-stroke: 1.5px rgb(0, 0, 0);
+  color: rgb(255, 255, 0);
+  text-shadow: 0 0 30px #ffffff;
+  box-shadow: 0 0 20px rgb(255, 255, 0);
+  }
+  
+  
+  a {
+    color: #fbff00;
+      text-shadow:
+        1px 1px 2px #000,
+        -1px 1px 2px #000,
+        -1px -1px 0 #000,
+        1px -1px 0 #000;
+  }
+  
+  
+  .titulos { 
+    padding: 10px;
+    margin: 10px;
+    border-radius: 20px;
+    border: solid;
+    border-color: rgb(0, 0, 0);
+    -webkit-text-stroke: px rgb(0, 0, 0);
+    color: #fff;
+    text-shadow:
+      1px 1px 2px #000,
+      -1px 1px 2px #000,
+      -1px -1px 0 #000,
+      1px -1px 0 #000;
+  
+    box-shadow: 0 0 20px rgb(255, 255, 255);
+  }
+  
+  .explicacion {
+    padding: 10px;
+    margin: 10px;
+    text-shadow:
+      1px 1px 2px #000,
+      -1px 1px 2px #000,
+      -1px -1px 0 #000,
+      1px -1px 0 #000;
+  
+  
+  }
+    
+  
+  /* estilos para imágenes https://www.w3schools.com/css/css3_images.asp */
+  /* posicionamiento de imágenes https://www.w3schools.com/css/css_positioning.asp */
+  
+  .iresponsive {
+    padding: 0 6px;
+    float: left;
+    width: auto;
+    text-align: center;
+  
+  }
+  
+  /* Responsive layout - cuando el ancho de pantalla es menor a 600px, muestra las columnas apiladas. */
+  /* Así conseguimos que el contenido se vea bien en dispositvos móviles */
+  
+  @media screen and (max-width: 600px) {
+    .columna {
+      width: 100%;
+    }
+  
+    .iresponsive {
+        width: 100%;
+    }
+  }
+  
+  /* Más sobre diseño web responsive https://www.w3schools.com/css/css_rwd_intro.asp */
