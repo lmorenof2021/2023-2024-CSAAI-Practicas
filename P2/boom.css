@@ -1,0 +1,41 @@
+* {
+    box-sizing: border-box;
+  }
+
+
+  body  {
+    background-image: url('fondo.avif');
+    background-size: cover; 
+    
+    }
+    
+
+.claves {
+    font-size: 30px;
+    text-align: center;
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+    margin: 10px;
+}
+
+.numero {
+  font-size: 30px;
+  background-color:aliceblue;
+}
+.botones{
+  background-color: aliceblue;
+  text-align: center;
+}
+
+  #display{
+    font-size: 30px;
+    text-align: center;
+    background-color: black;
+    color: aliceblue;
+  }
+
+  table{
+    font-size: 30px;
+    text-align: center;
+  }
+
