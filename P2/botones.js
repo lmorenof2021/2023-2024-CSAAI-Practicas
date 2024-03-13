@@ -1,79 +1,140 @@
 
 
-//-- Elementos de la gui
-const gui = {
-  clave1 : document.getElementById("clave1"), 
-  clave2 : document.getElementById("clave2"), 
-  clave3 : document.getElementById("clave3"),  
-  clave4 : document.getElementById("clave4"), 
-  // claves: document.getElementsByClassName("claves"),
-  display : document.getElementById("display"),
-  start : document.getElementById("start"),
-  stop : document.getElementById("stop"),
-  reset : document.getElementById("reset"),
-  botones: document.getElementsByClassName("numero")
+display = document.getElementById("display"),
+start = document.getElementById("start"),
+stop = document.getElementById("stop"),
+reset = document.getElementById("reset"),
 
-};
-console.log(gui)
+clave1 = document.getElementById("clave_1"), 
+clave2 = document.getElementById("clave_2"), 
+clave3 = document.getElementById("clave_3"),  
+clave4 = document.getElementById("clave_4"), 
+numeros = document.getElementsByClassName("numero")
+inicio = document.getElementById("inicio")
+
+
+clave1.innerHTML = "*"
+clave2.innerHTML = "*"
+clave3.innerHTML = "*"
+clave4.innerHTML = "*"
+
 console.log("Ejecutando JS...");
 const max = 9
 
+var clavesecreta = []
 function getRandomInt(max) {
-  return Math.floor(Math.random() * max);
+return Math.floor(Math.random() * max);
 }
 
-// clave1 = console.log(getRandomInt(max));
-// clave2 = console.log(getRandomInt(max));
-// clave3 = console.log(getRandomInt(max));
-// clave4 = console.log(getRandomInt(max));
+clave1Value = getRandomInt(max);
+clave2Value = getRandomInt(max);
+clave3Value = getRandomInt(max);
+clave4Value = getRandomInt(max);
+clavesecreta.push(clave1Value,clave2Value,clave3Value,clave4Value);
 
-const clave1Value = getRandomInt(max);
-const clave2Value = getRandomInt(max);
-const clave3Value = getRandomInt(max);
-const clave4Value = getRandomInt(max);
-
-gui.clave1.innerHTML = clave1Value;
-gui.clave2.innerHTML = clave2Value;
-gui.clave3.innerHTML = clave3Value;
-gui.clave4.innerHTML = clave4Value;
+console.log(clavesecreta)
 
 
-// caleatoria = ["clave1","clave2","clave3","clave4"];
-// console.log(caleatoria);
+
+//-- Estados de la calculadora
+const ESTADO = {
+INIT: 0,
+JUEGO: 1,
+FINAL: 2,
+
+}
+//-- Variable de estado
+//-- Por defecto su valor será el del estado inicial
+let estado = ESTADO.INIT;
 
 
-gui.boton1.onclick = () => {
-  console.log("click 1")
-  gui.clave1.innerHTML = "hola";
+
+function number(num)
+{
+
+if (estado ==ESTADO.INIT) {
+  crono.start()
+  inicio.innerHTML = "COMIENZO!!"
+  clave1.style.color = "red"
+  clave2.style.color = "red"
+  clave3.style.color = "red"
+  clave4.style.color = "red"
+}
+
+estado = ESTADO.JUEGO;
+
+
+//-- Segun el estado hacemos una cosa u otra
+if (estado == ESTADO.JUEGO) {
+  if (clave1Value == num.target.value) {
+    clave1.innerHTML = clave1Value
+    clave1.style.color = "green";
+
+  } 
+ 
+   if (clave2Value == num.target.value) {
+    clave2.innerHTML = clave2Value
+    clave2.style.color = "green"
+
+  } 
+   if (clave3Value == num.target.value) {
+    clave3.innerHTML = clave3Value
+    clave3.style.color = "green"
+
+  } 
+   if (clave4Value == num.target.value) {
+    clave4.innerHTML = clave4Value
+    clave4.style.color = "green"
+
+  } 
+
+}
+
+estado = ESTADO.FINAL;
+if(estado = ESTADO.FINAL){
+if (clave1.innerHTML == clave1Value && clave2.innerHTML ==clave2Value && clave3.innerHTML == clave3Value && clave4.innerHTML == clave4Value){
+  crono.stop()
+  crono.reset()
+  inicio.innerHTML = "HAS GANADO!!!"
+} 
+}
+
 }
 
 
 
+for (let boton of numeros) {
 
+  boton.onclick = (num) => {
+    number(num);
+  }
+}
 
 
 //-- Definir un objeto cronómetro
-const crono = new Crono(gui.display);
-
-//---- Configurar las funciones de retrollamada
+const crono = new Crono(display);
 
 
 //-- Arranque del cronometro
-gui.start.onclick = () => {
-    console.log("Start!!");
-    crono.start();
+start.onclick = () => {
+  console.log("Start!!");
+  crono.start();
+
+
 }
-  
+
 //-- Detener el cronómetro
-gui.stop.onclick = () => {
-    console.log("Stop!");
-    crono.stop();
+stop.onclick = () => {
+  console.log("Stop!");
+  crono.stop();
 }
 
 //-- Reset del cronómetro
-gui.reset.onclick = () => {
-    console.log("Reset!");
-    crono.reset();
+reset.onclick = () => {
+crono.reset();
+  estado = ESTADO.INIT;
+  console.log("Reset!");
+
 }
 
-  
+
