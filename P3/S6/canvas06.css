@@ -1,0 +1,18 @@
+/* Estilo del canvas
+  Lo bordeamos con una línea negra y le damos fondo
+  azul para distinguirlo
+*/
+h2{
+    color: rgb(0, 117, 45);
+    border: solid;
+    border-color: black;
+    
+}
+
+canvas {
+    background-color: rgb(237, 148, 255);
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgb(5, 65, 0);
+    border-radius: 5px;
+  }
