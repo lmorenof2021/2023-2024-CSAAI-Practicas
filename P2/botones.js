@@ -69,38 +69,41 @@ if (estado == ESTADO.JUEGO) {
   if (clave1Value == num.target.value) {
     clave1.innerHTML = clave1Value
     clave1.style.color = "green";
+    clave1Value = " "
 
   } 
  
-   if (clave2Value == num.target.value) {
+   else if (clave2Value == num.target.value) {
     clave2.innerHTML = clave2Value
     clave2.style.color = "green"
+    clave2Value = " "
 
   } 
-   if (clave3Value == num.target.value) {
+   else if (clave3Value == num.target.value) {
     clave3.innerHTML = clave3Value
     clave3.style.color = "green"
+    clave3Value = " "
 
   } 
-   if (clave4Value == num.target.value) {
+   else if (clave4Value == num.target.value) {
     clave4.innerHTML = clave4Value
     clave4.style.color = "green"
-
+    clave4Value = " "
   } 
+
 
 }
 
 estado = ESTADO.FINAL;
 if(estado = ESTADO.FINAL){
-if (clave1.innerHTML == clave1Value && clave2.innerHTML ==clave2Value && clave3.innerHTML == clave3Value && clave4.innerHTML == clave4Value){
+if (" " == clave1Value && " " ==clave2Value && " " == clave3Value && " " == clave4Value){
   crono.stop()
-  crono.reset()
   inicio.innerHTML = "HAS GANADO!!!"
 } 
-}
 
 }
 
+}
 
 
 for (let boton of numeros) {
@@ -134,7 +137,18 @@ reset.onclick = () => {
 crono.reset();
   estado = ESTADO.INIT;
   console.log("Reset!");
-
+  clave1.innerHTML = "*"
+  clave2.innerHTML = "*"
+  clave3.innerHTML = "*"
+  clave4.innerHTML = "*"
+  clave1Value = getRandomInt(max);
+  clave2Value = getRandomInt(max);
+  clave3Value = getRandomInt(max);
+  clave4Value = getRandomInt(max);
+  clave1.style.color = "black"
+  clave2.style.color = "black"
+  clave3.style.color = "black"
+  clave4.style.color = "black"
 }
 
 

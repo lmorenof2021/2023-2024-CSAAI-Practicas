@@ -4,9 +4,8 @@
 
 
   body  {
-    background-image: url('fondo1.jpg');
-    background-size: cover; 
-
+    background-image: url('fondo5.avif');
+    background-size: contain; 
     background-repeat: repeat;
     
     
@@ -14,15 +13,14 @@
     
 
 .claves {
-  display: flex;
+    display: flex;
     font-size: 30px;
     text-align: center;
-  justify-content: center;
+    justify-content: center;
     color: rgb(0, 0, 0);
     margin: 10px;
     
 }
-
 
 #clave_1{
   text-align: center;
@@ -33,10 +31,14 @@
   padding: 10px;
   margin: 10px;
   border-radius: 10px;
-
   color: rgb(0, 0, 0);
   text-shadow: 0 0 30px #ffffff;
   box-shadow: 0 0 20px rgb(255, 0, 0);
+  border: 10px inset #000000;
+  font-family: monospace;
+  background-image: radial-gradient(circle, rgb(255, 106, 19) 39%, rgb(255, 233, 37) 96%);
+  background-size: 100px 50px;
+
 }
 #clave_2{
   text-align: center;
@@ -47,10 +49,13 @@
   padding: 10px;
   margin: 10px;
   border-radius: 10px;
-
   color: rgb(0, 0, 0);
   text-shadow: 0 0 30px #ffffff;
   box-shadow: 0 0 20px rgb(255, 0, 0);
+  border: 10px inset #000000;
+  font-family: monospace;
+  background-image: radial-gradient(circle, rgb(255, 106, 19) 39%, rgb(255, 233, 37) 96%);
+  background-size: 100px 50px;
 }
 #clave_3{
   text-align: center;
@@ -61,10 +66,13 @@
   padding: 10px;
   margin: 10px;
   border-radius: 10px;
-
   color: rgb(0, 0, 0);
   text-shadow: 0 0 30px #ffffff;
   box-shadow: 0 0 20px rgb(255, 0, 0);
+  border: 10px inset #000000;
+  font-family: monospace;
+  background-image: radial-gradient(circle, rgb(255, 106, 19) 39%, rgb(255, 233, 37) 96%);
+  background-size: 100px 50px;
 }
 #clave_4{
   text-align: center;
@@ -75,10 +83,13 @@
   padding: 10px;
   margin: 10px;
   border-radius: 10px;
-
   color: rgb(0, 0, 0);
   text-shadow: 0 0 30px #ffffff;
   box-shadow: 0 0 20px rgb(255, 0, 0);
+  border: 10px inset #000000;
+  font-family: monospace;
+  background-image: radial-gradient(circle, rgb(255, 106, 19) 39%, rgb(255, 233, 37) 96%);
+  background-size: 100px 50px;
 }
 
 .numero {
@@ -93,7 +104,10 @@
   color: rgb(0, 0, 0);
   text-shadow: 0 0 30px #ffffff;
   box-shadow: 0 0 20px rgb(255, 0, 0);
-
+  border: 10px inset #000000;
+  font-family: monospace;
+  background-image: radial-gradient(circle, rgb(255, 106, 19) 39%, rgb(255, 233, 37) 96%);
+  background-size: 100px 50px;
 
 } 
 .crono{
@@ -108,6 +122,10 @@
   color: rgb(0, 0, 0);
   text-shadow: 0 0 30px #ffffff;
   box-shadow: 0 0 20px rgb(255, 0, 0);
+  border: 10px inset #000000;
+  font-family: monospace;
+  background-image: radial-gradient(circle, rgb(255, 106, 19) 39%, rgb(255, 233, 37) 96%);
+  background-size: 100px 50px;
 }
 .botones{
   text-align: center;
@@ -131,6 +149,10 @@
     box-shadow: 0 0 20px rgb(255, 0, 0);
     margin: auto;
     width: fit-content;
+    border: 10px inset #000000;
+    font-family: monospace;
+    background-image: radial-gradient(circle, rgb(255, 106, 19) 39%, rgb(255, 233, 37) 96%);
+    background-size: 100px 50px;
   }
   #inicio{
     font-size: 30px;
@@ -146,6 +168,11 @@
     box-shadow: 0 0 20px rgb(255, 0, 0);
     margin: auto;
     width: fit-content;
+    border: 10px inset #000000;
+    
+    font-family: monospace;
+    background-image: radial-gradient(circle, rgb(255, 106, 19) 39%, rgb(255, 233, 37) 96%);
+    background-size: 100px 50px;
   }
 
 
@@ -156,6 +183,7 @@
   /*float: left; */
   width: auto;
   text-align: center;
+  margin: 40px;
 
 }
 
