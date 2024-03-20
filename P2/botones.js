@@ -75,19 +75,19 @@ if (estado == ESTADO.JUEGO) {
  
    if (clave2Value == num.target.value) {
     clave2.innerHTML = clave2Value
-    clave2.style.color = "green"
+    clave2.style.color = "green";
 
 
   } 
    if (clave3Value == num.target.value) {
     clave3.innerHTML = clave3Value
-    clave3.style.color = "green"
+    clave3.style.color = "green";
 
 
   } 
    if (clave4Value == num.target.value) {
     clave4.innerHTML = clave4Value
-    clave4.style.color = "green"
+    clave4.style.color = "green";
   
   } 
 
@@ -96,7 +96,7 @@ if (estado == ESTADO.JUEGO) {
 
 estado = ESTADO.FINAL;
 if(estado = ESTADO.FINAL){
-if (clave1.innerHTML== clave1Value && clave2.innerHTML ==clave2Value && clave3.innerHTML == clave3Value && clave4.innerHTML == clave4Value){
+if (clave1.innerHTML == clave1Value && clave2.innerHTML ==clave2Value && clave3.innerHTML == clave3Value && clave4.innerHTML == clave4Value){
   crono.stop()
   inicio.innerHTML = "HAS GANADO!!!"
 } 
