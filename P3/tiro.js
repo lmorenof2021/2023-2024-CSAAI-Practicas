@@ -5,9 +5,8 @@ const range = document.getElementById("range");
 const range1 = document.getElementById("range1");
 const range_disp = document.getElementById("range_disp");
 const range1_disp = document.getElementById("range1_disp");
-
-
- 
+const disparar = document.getElementById("disparar");
+const iniciar = document.getElementById("iniciar");
 
 
 
@@ -31,8 +30,8 @@ return Math.floor(Math.random() * (max-min +1)+min);
 x = getRandomInt(300,maxx);
  //(max - min) +  max
 
-
- circulo.beginPath();
+ function dibujarCirculo(x) {
+    circulo.beginPath();
     //-- Dibujar un circulo: coordenadas x,y del centro
     //-- Radio, Angulo inicial y angulo final
 
@@ -48,15 +47,20 @@ x = getRandomInt(300,maxx);
     circulo.fill()
     
     
-circulo.closePath()
+    circulo.closePath()
+ }
 
-cuadrado.beginPath();
+dibujarCirculo(x);
 
-//distancia x,y, ancho,alto
-cuadrado.rect(50, 530, 60, 60);
+function dibujarCuadrado(x,y,lx,ly,color) {
+
+        cuadrado.beginPath();
+
+        //distancia x,y, ancho,alto
+        cuadrado.rect(x, y, lx, ly);
 
         //-- Dibujar
-        cuadrado.fillStyle = 'green';
+        cuadrado.fillStyle = color;
         cuadrado.strokeStyle = 'blue';
 
         //-- Rellenar
@@ -64,7 +68,42 @@ cuadrado.rect(50, 530, 60, 60);
 
         //-- Dibujar el trazo
         cuadrado.stroke()
-cuadrado.closePath();
+        cuadrado.closePath();
+
+}
+
+//-- Coordenadas iniciales del proyectil
+let xop = 50;
+let yop = 530;
+let xp = xop;
+let yp = yop;
+dibujarCuadrado(xop, yop, 60, 60, "green");
+
+
+let velp = 5;
+
+function lanzar() 
+{
+  //-- Implementación del algoritmo de animación:
+
+  //-- 1) Actualizar posición de los elementos
+  xp = xp + velp;
+
+  //-- 2) Borrar el canvas
+  cuadrado.clearRect(0, 0, canvas.width, canvas.height);
+
+  //-- 3) Pintar los elementos en el canvas
+  dibujarCuadrado(xp, yp, 60, 60, "blue"); // Pintar el proyectil
+  dibujarCirculo(x);
+  //-- 4) Repetir
+  requestAnimationFrame(lanzar);
+}
+
+
+//-- Función de retrollamada del botón de disparo
+disparar.onclick = () => {
+  lanzar();
+}
 
 range.oninput = () => {
     range_disp.innerHTML = range.value;
@@ -72,4 +111,26 @@ range.oninput = () => {
 
 range1.oninput = () => {
   range1_disp.innerHTML = range1.value;
+}
+
+
+
+
+
+
+
+
+//-- Definir un objeto cronómetro
+const crono = new Crono(display);
+
+
+//-- Arranque del cronometro
+// disparar.onclick = () => {
+//   console.log("Start!!");
+//   crono.start();
+// }
+
+//-- Función de retrollamada del botón iniciar
+iniciar.onclick = () => {
+  location.reload();
 }
