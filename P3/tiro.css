@@ -2,17 +2,94 @@
   Lo bordeamos con una línea negra y le damos fondo
   azul para distinguirlo
 */
+body{
+  text-align: center;
+  background-color: rgb(150, 231, 154);
+}
 
-canvas {
-    background-color: rgb(150, 231, 154);
+h1{
+  font-family: Comic Sans MS; 
+  font-weight:bold; 
+  font-size: 30px; 
+  color: #EBD758; 
+  text-shadow: -1px 0 #414D68, 0 1px #414D68, 1px 0 #414D68, 0 -1px #414D68, -2px 2px 0 #414D68, 2px 2px 0 #414D68, 1px 1px #414D68, 2px 2px #414D68, 3px 3px #414D68, 4px 4px #414D68, 5px 5px #414D68, 6px 6px #414D68, 7px 7px #414D68, 8px 8px #414D68, 9px 9px #414D68;
+}
+
+
+#ctiro {
     border-style: solid;
     border-width: 1px;
     border-color: black;
     border-radius: 5px;
+    background-image: url('fondo4.jpg');
+    background-size: contain; 
+    background-repeat: repeat;
   }
+#timer{
 
+  font-family: Comic Sans MS; 
+  font-weight:bold; 
+  font-size: 30px; 
+  color: #EBD758; 
+  text-shadow: -1px 0 #414D68, 0 1px #414D68, 1px 0 #414D68, 0 -1px #414D68, -2px 2px 0 #414D68, 2px 2px 0 #414D68, 1px 1px #414D68, 2px 2px #414D68, 3px 3px #414D68, 4px 4px #414D68, 5px 5px #414D68, 6px 6px #414D68, 7px 7px #414D68, 8px 8px #414D68, 9px 9px #414D68;
+}
 
+#display{
+ 
 
+  font-family: Comic Sans MS; 
+  font-weight:bold; 
+  font-size: 30px; 
+  color: #EBD758; 
+  text-shadow: -1px 0 #414D68, 0 1px #414D68, 1px 0 #414D68, 0 -1px #414D68, -2px 2px 0 #414D68, 2px 2px 0 #414D68, 1px 1px #414D68, 2px 2px #414D68, 3px 3px #414D68, 4px 4px #414D68, 5px 5px #414D68, 6px 6px #414D68, 7px 7px #414D68, 8px 8px #414D68, 9px 9px #414D68;
+}
+
+#angulo{
+  font-family: Comic Sans MS; 
+  font-weight:bold; 
+  font-size: 30px; 
+  color: #EBD758; 
+  text-shadow: -1px 0 #414D68, 0 1px #414D68, 1px 0 #414D68, 0 -1px #414D68, -2px 2px 0 #414D68, 2px 2px 0 #414D68, 1px 1px #414D68, 2px 2px #414D68, 3px 3px #414D68, 4px 4px #414D68, 5px 5px #414D68, 6px 6px #414D68, 7px 7px #414D68, 8px 8px #414D68, 9px 9px #414D68;
+}
+
+#velocidad{
+  font-family: Comic Sans MS; 
+  font-weight:bold; 
+  font-size: 30px; 
+  color: #EBD758; 
+  text-shadow: -1px 0 #414D68, 0 1px #414D68, 1px 0 #414D68, 0 -1px #414D68, -2px 2px 0 #414D68, 2px 2px 0 #414D68, 1px 1px #414D68, 2px 2px #414D68, 3px 3px #414D68, 4px 4px #414D68, 5px 5px #414D68, 6px 6px #414D68, 7px 7px #414D68, 8px 8px #414D68, 9px 9px #414D68;
+}
+
+#disparar{
+  border: #414D68, 8px groove;  
+  padding: 10px;
+  margin: 10px;
+  border-radius: 10px;
+  font-family: Comic Sans MS; 
+  font-weight:bold; 
+  font-size: 30px; 
+  color: #EBD758; 
+  text-shadow: -1px 0 #414D68, 0 1px #414D68, 1px 0 #414D68, 0 -1px #414D68, -2px 2px 0 #414D68, 2px 2px 0 #414D68, 1px 1px #414D68, 2px 2px #414D68, 3px 3px #414D68, 4px 4px #414D68, 5px 5px #414D68, 6px 6px #414D68, 7px 7px #414D68, 8px 8px #414D68, 9px 9px #414D68;
+background-image: radial-gradient(circle, rgb(151, 255, 156) 39%, rgb(206, 205, 195) 96%);
+background-size: 100px 50px;
+}
+
+#iniciar{
+background-color: #ffffff;
+border: #414D68, 8px groove;  
+padding: 10px;
+margin: 10px;
+border-radius: 10px;
+
+font-family: Comic Sans MS; 
+font-weight:bold; 
+font-size: 30px; 
+color: #EBD758; 
+text-shadow: -1px 0 #414D68, 0 1px #414D68, 1px 0 #414D68, 0 -1px #414D68, -2px 2px 0 #414D68, 2px 2px 0 #414D68, 1px 1px #414D68, 2px 2px #414D68, 3px 3px #414D68, 4px 4px #414D68, 5px 5px #414D68, 6px 6px #414D68, 7px 7px #414D68, 8px 8px #414D68, 9px 9px #414D68;
+background-image: radial-gradient(circle, rgb(151, 255, 156) 39%, rgb(206, 205, 195) 96%);
+background-size: 100px 50px;
+
+}
 .iresponsive {
   padding: 0 6px;
   /*float: left; */
