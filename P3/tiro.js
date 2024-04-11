@@ -113,6 +113,18 @@ function lanzar()
    
   t += 0.1;
 
+
+//-- Condición de rebote en extremos verticales del canvas
+if (xp < 0 || xp + 50 > canvas.width) {
+  velx = -velx;
+}
+
+//-- Condición de rebote en extremos horizontales del canvas
+if (yp <= 0 || yp + 50 > canvas.height) {
+  vely = -vely;
+  yp= canvas.height -50;
+} 
+
   //-- 2) Borrar el canvas
   ctx.clearRect(0, 0, canvas.width, canvas.height);
 
