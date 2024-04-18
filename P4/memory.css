@@ -1,14 +1,89 @@
 
 @font-face {
-    font-family: Montserrat;
-    src: url(./Montserrat-Regular.ttf);
-}
+    font-family: Jersey;
+    src: url(./GloriaHallelujah-Regular.ttf);
+} 
 
+body{
+    background-color: aliceblue;
+    /* background-size: contain; 
+    background-repeat: repeat; */
+    background-image: url('fondo2.webp');
+} 
+h1{
+
+font-size: 55px;
+    border-color: rgb(0, 0, 0);
+    -webkit-text-stroke: 0.7px rgb(0, 0, 0);
+    color: #fff;
+    text-shadow:
+      1px 1px 2px #000,
+      -1px 1px 2px #000,
+      -1px -1px 0 #000,
+      1px -1px 0 #000;
+  
+
+}
+.movimientos{
+    font-size: 30px;
+    /* text-shadow: -1px 0 #414D68, 0 1px #414D68, 1px 0 #414D68, 0 -1px #414D68, -2px 2px 0 #414D68, 2px 2px 0 #414D68, 1px 1px #414D68, 2px 2px #414D68, 3px 3px #414D68, 4px 4px #414D68, 5px 5px #414D68, 6px 6px #414D68, 7px 7px #414D68, 8px 8px #414D68, 9px 9px #414D68; */
+    -webkit-text-stroke: 0.1px rgb(0, 0, 0);
+    color: #fff;
+    text-shadow:
+      1px 1px 2px #000,
+      -1px 1px 2px #000,
+      -1px -1px 0 #000,
+      1px -1px 0 #000;
+}
+.timer{
+    font-size: 30px;
+    /* text-shadow: -1px 0 #414D68, 0 1px #414D68, 1px 0 #414D68, 0 -1px #414D68, -2px 2px 0 #414D68, 2px 2px 0 #414D68, 1px 1px #414D68, 2px 2px #414D68, 3px 3px #414D68, 4px 4px #414D68, 5px 5px #414D68, 6px 6px #414D68, 7px 7px #414D68, 8px 8px #414D68, 9px 9px #414D68; */
+    -webkit-text-stroke: 0.1px rgb(0, 0, 0);
+    color: #fff;
+    text-shadow:
+      1px 1px 2px #000,
+      -1px 1px 2px #000,
+      -1px -1px 0 #000,
+      1px -1px 0 #000;
+
+  
+}
+#tamañotablero{
+    font-weight:bold; 
+    background-color:#787ca0;    
+      font-size: 20px; 
+      color: #ffffff; 
+      /* text-shadow: -1px 0 #414D68, 0 1px #414D68, 1px 0 #414D68, 0 -1px #414D68, -2px 2px 0 #414D68, 2px 2px 0 #414D68, 1px 1px #414D68, 2px 2px #414D68, 3px 3px #414D68, 4px 4px #414D68, 5px 5px #414D68, 6px 6px #414D68, 7px 7px #414D68, 8px 8px #414D68, 9px 9px #414D68; */
+      border-color: rgb(0, 0, 0);
+      -webkit-text-stroke: 0.8px rgb(0, 0, 0);
+      transition: transform .6s cubic-bezier(0.4, 0.0, 0.2, 1);
+      backface-visibility: hidden;
+      border-style: dotted;
+     border-width: 3px;
+     border-color: wheat;
+  
+}
+#comenzar{
+    background-color:#787ca0;
+    font-size: 30px;
+  font-weight:bold; 
+  font-size: 20px; 
+  color: #ffffff; 
+  /* text-shadow: -1px 0 #414D68, 0 1px #414D68, 1px 0 #414D68, 0 -1px #414D68, -2px 2px 0 #414D68, 2px 2px 0 #414D68, 1px 1px #414D68, 2px 2px #414D68, 3px 3px #414D68, 4px 4px #414D68, 5px 5px #414D68, 6px 6px #414D68, 7px 7px #414D68, 8px 8px #414D68, 9px 9px #414D68; */
+  border-color: rgb(0, 0, 0);
+  -webkit-text-stroke: 1px rgb(0, 0, 0);
+  transition: transform .6s cubic-bezier(0.4, 0.0, 0.2, 1);
+  backface-visibility: hidden;
+  border-style: dotted;
+ border-width: 3px;
+ border-color: wheat;
+
+}
 html {
     width: 100%;
     height: 100%;
-    /* background: linear-gradient(325deg,  #6f00fc 0%,#fc7900 50%,#fcc700 100%); */
-    font-family: Montserrat;
+    /* background: linear-gradient(325deg,  #00550e 0%,#05c9bf 50%,#e72cc8 100%);  */
+    font-family: Jersey; 
 }
 
 .game {
@@ -31,7 +106,7 @@ button {
     padding: 10px 20px;
     border: 0;
     cursor: pointer;
-    font-family: Montserrat;
+    font-family: Jersey; 
     font-size: 18pt;
 }
 
@@ -46,6 +121,7 @@ button {
 
 .grid-container {
     position: relative;
+    
 }
 
 .tablero,
@@ -58,7 +134,7 @@ button {
 }
 
 .tablero {
-    padding: 20px;
+    padding: 35px;
     display: grid;
     grid-template-columns: repeat(4, auto);
     grid-gap: 20px;
@@ -87,9 +163,14 @@ button {
     border-radius: 5px;
     width: 100%;
     height: 100%;
-    background: #282A3A;
+    background: #787ca0;
     transition: transform .6s cubic-bezier(0.4, 0.0, 0.2, 1);
     backface-visibility: hidden;
+    border-style: dotted;
+   border-width: 3px;
+   border-color: wheat;
+
+
 }
 
 .card-back {

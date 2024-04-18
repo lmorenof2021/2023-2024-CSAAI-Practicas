@@ -10,9 +10,20 @@
         <script src="memory.js" defer></script>
     </head>
     <body>
+        <div class="iresponsive">
         <div class="game">
             <div class="controles">
-                <button>Comenzar</button>
+                <h1>MEMORY</h1>
+                
+              
+                <!-- <p> <input type="number"></p> -->
+                <button id="comenzar">Comenzar</button>
+                <select id="tamañotablero">
+                    <option value="tamaño">Tamaño tablero</option>
+                    <option value="dos">2x2</option>
+                    <option value="cuatro">4x4</option>
+                    <option value="seis">6x6</option>
+                </select>
                 <div class="display">
                     <div class="movimientos">0 movimientos</div>
                     <div class="timer">tiempo: 0 sec</div>
@@ -23,11 +34,12 @@
                     
                     <div class="card flipped">
                         <div class="card-front"></div>                    
-                        <div class="card-back">🍍</div>
+                        <div class="card-back"></div>
                     </div>
                 </div>
                 <div class="win">¡Has Ganado!</div>
             </div>
         </div>
+    </div>
     </body>
 </html>

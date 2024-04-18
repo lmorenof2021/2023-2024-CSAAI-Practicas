@@ -1,3 +1,4 @@
+
 const selectors = {
     gridContainer: document.querySelector('.grid-container'),
     tablero: document.querySelector('.tablero'),
@@ -5,6 +6,7 @@ const selectors = {
     timer: document.querySelector('.timer'),
     comenzar: document.querySelector('button'),
     win: document.querySelector('.win')
+ 
 }
 
 const state = {
@@ -25,7 +27,7 @@ const generateGame = () => {
     }
 
     //-- Creamos un array con los emojis que vamos a utilizar en nuestro juego
-    const emojis = ['🥔', '🍒', '🥑', '🌽', '🥕', '🍇', '🍉', '🍌', '🥭', '🍍']
+    const emojis = ['🐒', '🦁', '🦄', '🦥', '🐼', '🐣', '🐷', '🦚', '🦩', '🦭']
     
     //-- Elegimos un subconjunto de emojis al azar, así cada vez que comienza el juego
     // es diferente.
@@ -229,3 +231,4 @@ const flipBackCards = () => {
             }, 1000)
         }
     }
+
