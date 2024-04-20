@@ -18,7 +18,8 @@ const state = {
 }
 
 const generateGame = () => {
-    const dimensions = selectors.tablero.getAttribute('grid-dimension')
+    //-- Para que las dimensiones de tablero se pongan
+    const dimensions = document.getElementById("tamaniotablero").value;
 
     //-- Nos aseguramos de que el número de dimensiones es par
     // y si es impar lanzamos un error
@@ -27,7 +28,7 @@ const generateGame = () => {
     }
 
     //-- Creamos un array con los emojis que vamos a utilizar en nuestro juego
-    const emojis = ['🐒', '🦁', '🦄', '🦥', '🐼', '🐣', '🐷', '🦚', '🦩', '🦭']
+    const emojis = ['🐒', '🦁', '🦄', '🦥', '🐼', '🐣', '🐷', '🦚', '🦩', '🦭',' 🐍','🦆','🪱','🐛','🦔','🐊','🐧','🐩']
     
     //-- Elegimos un subconjunto de emojis al azar, así cada vez que comienza el juego
     // es diferente.
@@ -82,6 +83,9 @@ const pickRandom = (array, items) => {
     return randomPicks
 }
 
+
+
+
 const shuffle = array => {
     const clonedArray = [...array]
 
@@ -101,6 +105,7 @@ const shuffle = array => {
 }
 
 const attachEventListeners = () => {
+    
     document.addEventListener('click', event => {
         // Del evento disparado vamos a obtener alguna información útil
         // Como el elemento que ha disparado el evento y el contenedor que lo contiene
@@ -120,6 +125,7 @@ const attachEventListeners = () => {
 
 // Generamos el juego
 generateGame()
+
 
 // Asignamos las funciones de callback para determinados eventos
 attachEventListeners()
