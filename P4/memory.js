@@ -22,8 +22,7 @@ const state = {
 
 const generateGame = () => {
     //-- Para que las dimensiones de tablero se pongan
-    //const dimensions = document.getElementById("tamaniotablero").value;
-    const dimensions = selectors.tablero.getAttribute('grid-dimension')
+    const dimensions = document.getElementById("tamaniotablero").value;
     //-- Nos aseguramos de que el número de dimensiones es par
     // y si es impar lanzamos un error
     if (dimensions % 2 !== 0) {
