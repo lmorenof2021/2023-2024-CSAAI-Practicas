@@ -130,6 +130,7 @@ html {
     display: flex;
     gap: 20px;
     margin-bottom: 20px;
+    margin-left: 50px;
 }
 
 button {
