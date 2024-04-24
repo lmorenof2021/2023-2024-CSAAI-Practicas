@@ -5,8 +5,10 @@ const selectors = {
     movimientos: document.querySelector('.movimientos'),
     timer: document.querySelector('.timer'),
     comenzar: document.querySelector('button'),
-    win: document.querySelector('.win')
- 
+    win: document.querySelector('.win'),
+    reiniciar: document.querySelector('button'),
+
+    
 }
 
 const state = {
@@ -16,6 +18,7 @@ const state = {
     totalTime: 0,
     loop: null
 }
+
 
 const generateGame = () => {
     //-- Para que las dimensiones de tablero se pongan
