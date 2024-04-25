@@ -3,7 +3,10 @@
     box-sizing: border-box;
   }
 
-
+p{
+    color: rgb(253, 253, 253);
+    font-family: 'Courier New', Courier, monospace;
+}
 @font-face {
     font-family: Jersey;
     src: url(Monoton-Regular.ttf);
