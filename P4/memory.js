@@ -7,8 +7,6 @@ const selectors = {
     comenzar: document.querySelector('button'),
     win: document.querySelector('.win'),
     reiniciar: document.querySelector('#reiniciar'),
-
-    
 }
 
 const state = {
@@ -19,11 +17,9 @@ const state = {
     loop: null
 }
 
-
-
 const generateGame = () => {
-    //-- Para que las dimensiones de tablero se pongan
-    const dimensions = document.getElementById("tamaniotablero").value;
+    const dimensions = parseInt(document.getElementById("tamaniotablero").value);
+
     //-- Nos aseguramos de que el número de dimensiones es par
     // y si es impar lanzamos un error
     if (dimensions % 2 !== 0) {
@@ -240,6 +236,8 @@ const flipBackCards = () => {
             }, 1000)
         }
     }
+
+
 
     const reinicio = () => {
         console.log ("reininciando...");
