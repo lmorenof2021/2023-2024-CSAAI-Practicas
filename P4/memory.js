@@ -18,7 +18,15 @@ const state = {
     totalTime: 0,
     loop: null
 }
+ const reiniciar = {
+    gameStarted: false,
+    flippedCards: 0,
+    totalFlips: 0,
+    totalTime: 0,
+    
 
+    
+ }
 
 const generateGame = () => {
     //-- Para que las dimensiones de tablero se pongan

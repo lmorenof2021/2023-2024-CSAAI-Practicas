@@ -1,4 +1,9 @@
 
+* {
+    box-sizing: border-box;
+  }
+
+
 @font-face {
     font-family: Jersey;
     src: url(Monoton-Regular.ttf);
@@ -255,20 +260,34 @@ button {
     width: auto;
     text-align: center;
     margin: 40px;
-  
+    display: flex;
+
+    flex-wrap: wrap;
   }
+  
+
+  .game {
+    width: 100%;
+}
   
   /* Responsive layout - cuando el ancho de pantalla es menor a 600px, muestra las columnas apiladas. */
   /* Así conseguimos que el contenido se vea bien en dispositvos móviles */
   
-  @media screen and (max-width: 600px) {
+  @media screen and (min-width: 600px) {
   
   
-    .iresponsive {
-        width: 100%;
+    .game {
+        width: 50%;
     }
-    .game .controles{
-        width: 100%;
+  
+
+}
+@media screen and (min-width: 600px) {
+  
+  
+    .game {
+        width: 33.33%;
     }
+  
 
 }
