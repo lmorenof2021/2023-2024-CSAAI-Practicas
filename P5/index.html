@@ -6,15 +6,28 @@
     <title>Simulación de envío de paquetes de datos</title>
 
     <link rel="stylesheet" href="red.css">
-
+    <script src="dijkstra.js" defer></script>
     <script src="red.js" defer></script>
 
 </head>
 <body>
+    <div class="iresponsive">
     <div class="controls">
         <button id="btnCNet">Generar Red</button>
         <button id="btnMinPath">Calcular ruta</button>
     </div>
+    <div class="display"> 
+        <div id="nodos"></div>
+        <div id="tiempo"></div>
+        <div id="mensaje"></div>
+    </div>
+    <div class="net">
     <canvas id="networkCanvas" width="800" height="400"></canvas>
+    </div>
+    </div>
+    
+    <div class="ruta"> <!--cuando le doy a generar red se rellena este apartado-->
+        <!--class nodo> nodo: x delay: x..... asi 5 veces-->
+    </div>
 </body>
 </html>
