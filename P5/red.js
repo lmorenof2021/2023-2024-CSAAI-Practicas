@@ -173,7 +173,7 @@ function crearRedAleatoriaConCongestion(numNodos, numConexiones) {
   // Seleccionamos tantos nodos como indica la variable numConexiones
   // El nodo será candidato siempre que no estén ya conectados
   for (let nodo of nodos) {
-    //console.log("id: " + nodo.id + " distancia al nodo: " + nodo.node_distance(nodos[0].x, nodos[0].y));
+    console.log("id: " + nodo.id + " distancia al nodo: " + nodo.node_distance(nodos[0].x, nodos[0].y));
 
       const clonedArray = [...nodos];
 
@@ -266,7 +266,8 @@ btnCNet.onclick = () => {
   
     // Dibujar la red que hemos generado
     drawNet(redAleatoria);
-  
+    nodos.innerHTML = "0 nodos";
+    tiempo.innerHTML = "tiempo total: 0 sec" 
 }
 
 // Función de callback para generar la ruta mínima
@@ -280,8 +281,8 @@ btnMinPath.onclick = () => {
     rutaMinimaConRetardos = dijkstraConRetardos(redAleatoria, nodoOrigen, nodoDestino);
     console.log("Ruta mínima con retrasos:", rutaMinimaConRetardos);
     nodos.innerHTML = numNodos + " nodos";
-    tiempo.innerHTML = "tiempo total: x sec";
+    tiempo.innerHTML = "tiempo total: " + generarRetardo() + " sec";
     mensaje.innerHTML = "Red generada";
- 
-
+   
+  
 }
