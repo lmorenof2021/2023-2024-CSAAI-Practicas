@@ -207,51 +207,6 @@ function randomNumber(min, max) {
     return Math.floor(Math.random() * (max - min) + min);
 }
 
-// Función para generar un retardo aleatorio entre 0 y 1000 ms
-function generarRetardo() {
-    return Math.random() * nodeRandomDelay;
-}
-
-// Dibujar la red en el canvas
-function drawNet(nnodes) {  
-
-  // Dibujamos las conexiones entre nodos
-  nnodes.forEach(nodo => {
-    nodo.conexiones.forEach(({ nodo: conexion, peso }) => {
-      ctx.beginPath();
-      ctx.moveTo(nodo.x, nodo.y);
-      ctx.lineTo(conexion.x, conexion.y);
-      ctx.stroke();
-
-      ctx.font = '12px Arial';
-      ctx.fillStyle = 'black';
-      ctx.textAlign = 'center';
-      pw = "N" + nodo.id + " pw " + peso;
-      const midX = Math.floor((nodo.x + conexion.x)/2);
-      const midY = Math.floor((nodo.y + conexion.y)/2);
-      ctx.fillText(pw, midX, midY);  
-
-    });
-  });
-
-
-  let nodoDesc; // Descripción del nodo
-
-  // Dibujamos los nodos
-  nnodes.forEach(nodo => {
-    ctx.beginPath();
-    ctx.arc(nodo.x, nodo.y, nodeRadius, 0, 2 * Math.PI);
-    ctx.fillStyle = 'blue';
-    ctx.fill();
-    ctx.stroke();
-    ctx.font = '12px Arial';
-    ctx.fillStyle = 'white';
-    ctx.textAlign = 'center';
-    nodoDesc = "N" + nodo.id + " delay " + Math.floor(nodo.delay);
-    ctx.fillText(nodoDesc, nodo.x, nodo.y + 5);
-  });    
-
-}
 
 
 // Función de callback para generar la red de manera aleatoria
@@ -268,21 +223,76 @@ btnCNet.onclick = () => {
     drawNet(redAleatoria);
     nodos.innerHTML = "0 nodos";
     tiempo.innerHTML = "tiempo total: 0 sec" 
+   
 }
+
+
+
+// Función para generar un retardo aleatorio entre 0 y 1000 ms
+function generarRetardo() {
+  return Math.random() * nodeRandomDelay;
+}
+
+
+// Dibujar la red en el canvas
+function drawNet(nnodes) {  
+
+// Dibujamos las conexiones entre nodos
+nnodes.forEach(nodo => {
+  nodo.conexiones.forEach(({ nodo: conexion, peso }) => {
+    ctx.beginPath();
+    ctx.moveTo(nodo.x, nodo.y);
+    ctx.lineTo(conexion.x, conexion.y);
+    ctx.stroke();
+
+    ctx.font = '12px Arial';
+    ctx.fillStyle = 'black';
+    ctx.textAlign = 'center';
+    pw = "N" + nodo.id + " pw " + peso;
+    const midX = Math.floor((nodo.x + conexion.x)/2);
+    const midY = Math.floor((nodo.y + conexion.y)/2);
+    ctx.fillText(pw, midX, midY);  
+
+  });
+});
+
+
+let nodoDesc; // Descripción del nodo
+
+// Dibujamos los nodos
+nnodes.forEach(nodo => {
+  ctx.beginPath();
+  ctx.arc(nodo.x, nodo.y, nodeRadius, 0, 2 * Math.PI);
+  ctx.fillStyle = 'blue';
+
+  ctx.fill();
+  ctx.stroke();
+  ctx.font = '12px Arial';
+  ctx.fillStyle = 'white';
+  ctx.textAlign = 'center';
+  nodoDesc = "N" + nodo.id + " delay " + Math.floor(nodo.delay);
+  ctx.fillText(nodoDesc, nodo.x, nodo.y + 5);
+  delaytotal = Math.floor(nodo.delay)
+
+});    
+
+}
+
 
 // Función de callback para generar la ruta mínima
 btnMinPath.onclick = () => {
-    mensaje.innerHTML = "Primero genere la red, por favor.";
-    // Supongamos que tienes una red de nodos llamada redAleatoria y tienes nodos origen y destino
-    nodoOrigen = redAleatoria[0]; // Nodo de origen
-    nodoDestino = redAleatoria[numNodos - 1]; // Nodo de destino
+  mensaje.innerHTML = "Primero genere la red, por favor.";
+  // Supongamos que tienes una red de nodos llamada redAleatoria y tienes nodos origen y destino
+  nodoOrigen = redAleatoria[0]; // Nodo de origen
+  nodoDestino = redAleatoria[numNodos - 1]; // Nodo de destino
+
+  // Calcular la ruta mínima entre el nodo origen y el nodo destino utilizando Dijkstra con retrasos
+  rutaMinimaConRetardos = dijkstraConRetardos(redAleatoria, nodoOrigen, nodoDestino);
+  drawNet(redAleatoria);
+  console.log("Ruta mínima con retrasos:", rutaMinimaConRetardos);
+  nodos.innerHTML = numNodos + " nodos";
+  tiempo.innerHTML = "tiempo total: " + delaytotal + " sec";
+  mensaje.innerHTML = "Red generada";
   
-    // Calcular la ruta mínima entre el nodo origen y el nodo destino utilizando Dijkstra con retrasos
-    rutaMinimaConRetardos = dijkstraConRetardos(redAleatoria, nodoOrigen, nodoDestino);
-    console.log("Ruta mínima con retrasos:", rutaMinimaConRetardos);
-    nodos.innerHTML = numNodos + " nodos";
-    tiempo.innerHTML = "tiempo total: " + generarRetardo() + " sec";
-    mensaje.innerHTML = "Red generada";
-   
   
 }
