@@ -258,13 +258,19 @@ nnodes.forEach(nodo => {
 
 
 let nodoDesc; // Descripción del nodo
-
+let nodoruta; //nodos de la ruta establecida
 // Dibujamos los nodos
 nnodes.forEach(nodo => {
   ctx.beginPath();
   ctx.arc(nodo.x, nodo.y, nodeRadius, 0, 2 * Math.PI);
   ctx.fillStyle = 'blue';
-
+  if (rutaMinimaConRetardos){
+  for (nodoruta  of rutaMinimaConRetardos) {
+    if (nodoruta.id === nodo.id) {
+        ctx.fillStyle = 'green';
+        
+    }
+}} 
   ctx.fill();
   ctx.stroke();
   ctx.font = '12px Arial';
@@ -272,7 +278,7 @@ nnodes.forEach(nodo => {
   ctx.textAlign = 'center';
   nodoDesc = "N" + nodo.id + " delay " + Math.floor(nodo.delay);
   ctx.fillText(nodoDesc, nodo.x, nodo.y + 5);
-  delaytotal = Math.floor(nodo.delay)
+  delaytotal = Math.floor(nodo.delay);
 
 });    
 
@@ -285,7 +291,7 @@ btnMinPath.onclick = () => {
   // Supongamos que tienes una red de nodos llamada redAleatoria y tienes nodos origen y destino
   nodoOrigen = redAleatoria[0]; // Nodo de origen
   nodoDestino = redAleatoria[numNodos - 1]; // Nodo de destino
-
+  ctx.fillStyle = 'blue';
   // Calcular la ruta mínima entre el nodo origen y el nodo destino utilizando Dijkstra con retrasos
   rutaMinimaConRetardos = dijkstraConRetardos(redAleatoria, nodoOrigen, nodoDestino);
   drawNet(redAleatoria);
